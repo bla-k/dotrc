@@ -1,0 +1,23 @@
+--vim.api.nvim_create_user_command("RustFeatures", function ()
+--    local clients = vim.lsp.get_active_clients({ name = "rust-analyzer" })
+--    if #clients == 0 then
+--        print("rust-analyzer is not running")
+--        return
+--    end
+--
+--    local client = clients[1]
+--
+--    local settings = client.config.settings or {}
+--    local settings_ra = settings["rust-analyzer"] or {}
+--    local settings_cargo = settings_ra.cargo or {}
+--    local features = settings_cargo.features or {}
+--
+--    if features == "all" then
+--        print(" -> Active Features: ALL")
+--    elseif type(features) == "table" and #features > 0 then
+--        print(" -> Active Features: " .. table.concat(features, ", "))
+--    else
+--        print(" -> Active Features: DEFAULT")
+--    end
+--end, { desc = "Print currently enabled cargo features for rust-analyzer" })
+--
