@@ -2,5 +2,5 @@ require("config.options")
 require("config.diagnostics")
 require("config.keymaps")
 require("config.lazy")
-require("config.commands")
 
+require("lualine").setup {}
