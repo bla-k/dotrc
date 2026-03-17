@@ -5,6 +5,8 @@ vim.g.maplocalleader = " "
 
 keymap("n", "<leader>b", ":NvimTreeToggle<cr>", { desc = "Toggle nvim-tree" })
 keymap("n", "<leader>tff", ":Telescope find_files<cr>", { desc = "Telescope find file" })
+keymap("n", "<leader>tlr", ":Telescope lsp_references<cr>", { desc = "Telescope find usage" })
+keymap("n", "<leader>nff", ":NvimTreeFindFile<cr>", { desc = "nvim-tree pinpoint file" })
 
 keymap("n", "<leader>/", ":let @/=''<cr>", { desc = "Clear search" })
 
