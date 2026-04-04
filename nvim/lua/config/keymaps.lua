@@ -11,7 +11,8 @@ keymap("n", "<leader>nff", ":NvimTreeFindFile<cr>", { desc = "nvim-tree pinpoint
 keymap("n", "<leader>/", ":let @/=''<cr>", { desc = "Clear search" })
 
 -- Rust
-keymap("n", "<leader>fmt", ":RustFmt<cr>", { desc = "run rustfmt on file" });
+--keymap("n", "<leader>fmt", ":RustFmt<cr>", { desc = "run rustfmt on file" });
+keymap("n", "<leader>fmt", ":lua vim.lsp.buf.format()<cr>", { desc = "run rustfmt on file" });
 
 -- inline hints
 keymap("n", "<leader>ih", function ()
