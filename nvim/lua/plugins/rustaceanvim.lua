@@ -1,6 +1,6 @@
 return {
     "mrcjkb/rustaceanvim",
-    version = "^6",
+    version = "*",
     lazy = false,
     config = function()
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -27,19 +27,5 @@ return {
                 }
             },
         }
-
-        -- Configure LSP hover window borders
-        vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-            vim.lsp.handlers.hover, {
-                border = "rounded" -- or "single", "double", "shadow"
-            }
-        )
-
-        -- Also configure signature help borders (appears when typing function arguments)
-        vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-            vim.lsp.handlers.signature_help, {
-                border = "rounded"
-            }
-        )
     end,
 }

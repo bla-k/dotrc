@@ -3,6 +3,8 @@ local keymap = vim.keymap.set
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+keymap("n", "K", function() lsp.buf.hover { border = "rounded" } end)
+
 keymap("n", "<leader>b", ":NvimTreeToggle<cr>", { desc = "Toggle nvim-tree" })
 keymap("n", "<leader>tff", ":Telescope find_files<cr>", { desc = "Telescope find file" })
 keymap("n", "<leader>tlr", ":Telescope lsp_references<cr>", { desc = "Telescope find usage" })
