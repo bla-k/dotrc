@@ -6,8 +6,6 @@ vim.g.maplocalleader = " "
 keymap("n", "K", function() lsp.buf.hover { border = "rounded" } end)
 
 keymap("n", "<leader>b", ":NvimTreeToggle<cr>", { desc = "Toggle nvim-tree" })
-keymap("n", "<leader>tff", ":Telescope find_files<cr>", { desc = "Telescope find file" })
-keymap("n", "<leader>tlr", ":Telescope lsp_references<cr>", { desc = "Telescope find usage" })
 keymap("n", "<leader>nff", ":NvimTreeFindFile<cr>", { desc = "nvim-tree pinpoint file" })
 
 keymap("n", "<leader>/", ":let @/=''<cr>", { desc = "Clear search" })
@@ -31,4 +29,7 @@ keymap("n", "<leader>dd", function ()
 end, { desc = "Toggle diagnostics virtual text" })
 
 -- telescope
-keymap("n", "<leader>ts", ":Telescope lsp_document_symbols<cr>", { desc = "Document symbols" })
+keymap("n", "<leader>tds", ":Telescope lsp_document_symbols<cr>", { desc = "Document symbols" })
+keymap("n", "<leader>tws", ":Telescope lsp_workspace_symbols<cr>", { desc = "Document symbols" })
+keymap("n", "<leader>tff", ":Telescope find_files<cr>", { desc = "Telescope find file" })
+keymap("n", "<leader>tlr", ":Telescope lsp_references<cr>", { desc = "Telescope find usage" })
